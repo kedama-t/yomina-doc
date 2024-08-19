@@ -1,48 +1,47 @@
-import { themes as prismThemes } from 'prism-react-renderer';
-import type { Config } from '@docusaurus/types';
-import type * as Preset from '@docusaurus/preset-classic';
+import { themes as prismThemes } from "prism-react-renderer";
+import type { Config } from "@docusaurus/types";
+import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
-  title: 'YOMINA',
-  tagline: 'Dinosaurs are cool',
-  favicon: 'img/favicon.ico',
+  title: "YOMINA",
+  tagline: "Dinosaurs are cool",
+  favicon: "img/favicon.ico",
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: "https://your-docusaurus-site.example.com",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: "/",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: "facebook", // Usually your GitHub org/user name.
+  projectName: "docusaurus", // Usually your repo name.
 
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenLinks: "throw",
+  onBrokenMarkdownLinks: "warn",
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'ja',
-    locales: ['ja'],
+    defaultLocale: "ja",
+    locales: ["ja"],
   },
 
   presets: [
     [
-      'classic',
+      "classic",
       {
         docs: {
-          routeBasePath: '/',
-          sidebarPath: './sidebars.ts',
+          routeBasePath: "/",
+          sidebarPath: "./sidebars.ts",
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: "https://github.com/kedama-t/yomina-doc/blob/main/",
         },
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: "./src/css/custom.css",
         },
       } satisfies Preset.Options,
     ],
@@ -50,46 +49,56 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    image: "img/docusaurus-social-card.jpg",
     navbar: {
-      title: 'YOMINA - Doc',
+      title: "YOMINA - Doc",
       logo: {
-        alt: 'My Site Logo',
-        src: 'https://yomina.app/images/icon128.png',
+        alt: "My Site Logo",
+        src: "https://yomina.app/images/icon128.png",
       },
       items: [
         {
-          type: 'doc',
-          docId: 'intro',
-          position: 'left',
-          label: 'はじめに',
+          type: "doc",
+          docId: "intro",
+          position: "left",
+          label: "はじめに",
         },
         {
-          type: 'docSidebar',
-          sidebarId: 'quickStart',
-          position: 'left',
-          label: 'クイックスタート',
+          type: "docSidebar",
+          sidebarId: "quickStart",
+          position: "left",
+          label: "クイックスタート",
         },
         {
-          href: 'https://yomina.app',
-          label: 'YOMINA',
-          position: 'right',
+          type: "doc",
+          docId: "faq",
+          position: "left",
+          label: "Q&A",
+        },
+        {
+          href: "https://yomina.app",
+          label: "YOMINA",
+          position: "right",
         },
       ],
     },
     footer: {
-      style: 'dark',
+      style: "dark",
       links: [
         {
-          title: 'Links',
+          title: "Links",
           items: [
             {
-              label: 'YOMINAのX',
-              href: 'https://twitter.com/YOMINA_app',
+              label: "YOMINA",
+              href: "https://yomina.app/",
             },
             {
-              label: '開発者のX',
-              href: 'https://twitter.com/kedamat99',
+              label: "YOMINAのX",
+              href: "https://x.com/YOMINA_app",
+            },
+            {
+              label: "開発者のX",
+              href: "https://x.com/kedamat99",
             },
           ],
         },
